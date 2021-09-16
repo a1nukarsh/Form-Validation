@@ -67,13 +67,17 @@ submit.addEventListener("click", (e) => {
   if (validEmail && validUser && validPhone) {
     console.log("Phone Email and User are valid, submitting the form");
     let success = document.getElementById("success");
+    let fail = document.getElementById("fail");
     success.classList.add("show");
     fail.classList.remove("show");
+    // $('#fail').alert('close')
   } else {
     console.log("Phone Email and User may not be valid, Try Again");
     let fail = document.getElementById("fail");
+    let success = document.getElementById("success");
     fail.classList.add("show");
     success.classList.remove("show");
+    // $('#success').alert('close')
   }
 
 });
